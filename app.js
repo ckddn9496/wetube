@@ -12,6 +12,7 @@ import routes from "./routes";
 import globalRouter from "./routers/globalRouter";
 import videoRouter from "./routers/videoRouter";
 import userRouter from "./routers/userRouter";
+import apiRouter from "./routers/apiRouter";
 
 import "./passport";
 
@@ -44,5 +45,6 @@ app.use(localMiddleware);
 app.use(routes.home, globalRouter);
 app.use(routes.users, userRouter);
 app.use(routes.videos, videoRouter);
+app.use(routes.api, apiRouter);
 
 export default app; // 누군가 내 파일을 불러올 때 app object를 뱉어준다.
